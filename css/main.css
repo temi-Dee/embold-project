@@ -1,0 +1,749 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: tertiary;
+}
+
+
+body {
+    position: relative;
+    background: #081b29;
+    color: var(--white);
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140%;
+    height: 100%; 
+   background: var(--light-blue);
+     animation: showRight 1s ease forwards;
+    animation-delay: .5s;
+    z-index: 1000;
+
+}
+
+
+
+
+/* ================== NAVBAR ======================== */
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 60px;
+    background: var(--dark-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-menu-icon{
+    display:none;
+}
+
+.navbar{
+    margin-right: 40px;
+}
+/* ================ circle animation design  start */
+
+.logo {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid var(--light-blue);
+    border-radius: 50%;
+    position: relative;
+    animation: edge 5s linear infinite;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 12px 4px #fff;
+}
+
+
+
+/* ============== circle animation design ends ================== */
+
+
+.navbar a {
+    font-size: var(--small);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--light-blue);
+}
+
+/* ================== NAVBAR SECTION ENDS ======================== */
+
+/* ================== HOME SECTION ======================== */
+.home {
+    height: 100vh;
+    background: url() no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+    margin-right: 25px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: secondary;
+}
+
+
+.home-content h1 ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.home-content h1 span {
+    letter-spacing: 20px;
+    font-family: secondary;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--light-blue);
+}
+
+.home-content h3 ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-blue);
+    /* animation: showRight 1s ease forwards;
+    animation-delay: 3.6s; */
+}
+
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content p ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-blue);
+    /* animation: showRight 1s ease forwards;
+    animation-delay: 3.8s; */
+}
+
+.home-content .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    animation: showRight 1s ease forwards;
+    animation-delay: 4.0s;
+    z-index: 2;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    /* background: var(--dark-blue); */
+    /* animation: showRight 1s ease forwards;
+    animation-delay: 4.2s;
+    z-index: 2; */
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: var(--light-blue);
+    border: 2px solid var(--light-blue);
+    border-radius: 50%;
+    font-size: 20px;
+    /* color: var(--light-blue); */
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-sci a:hover {
+    color: var(--gradient);
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .5s;
+    background:var(--gradient);
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.home-sci a img{
+    width: 20px;
+   
+ 
+    
+
+    
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #00abf0;
+   transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4.4s;
+    pointer-events: none;
+}
+
+.home-imgHover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%;
+    height: 100%;
+    background: var(--dark-blue);
+    animation: showRight 1s ease forwards;
+    animation-delay: 4.6s;
+    z-index: 100;
+}
+
+.home-imgHover:hover {
+    background: var(--dark-blue);
+    opacity: .8s;
+}
+
+
+/* ================== HOME SECTION ENDS ======================== */
+
+/* ================== ABOUT SECTION START ======================== */
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+height: 100vh;
+align-items: center;
+justify-content: center;
+}
+
+/* -------- ABOUT CONTAINER RIGHT STARTS ---------------*/
+.about-container-right {
+    width: 40%;
+    padding: 40px;
+
+}
+
+.about-container-right h1 {
+    color: var(--light-blue);
+    font-size: var(--h1);
+    word-spacing: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.about-container-right p {
+    font-size: var(--small-big);
+    font-family: secondary;
+    text-align: justify;
+}
+
+/* -------- ABOUT CONTAINER RIGHT ENDS ---------------*/
+
+
+/* -------- ABOUT CONTAINER LEFT STARTS ---------------*/
+
+
+.about-container-left {
+    width: 60%;
+    padding: 40px;
+    justify-content: center;
+}
+
+.about-container-left h1 {
+    color: var(--light-blue);
+    font-size: var(--h1);
+    word-spacing: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.skill-box {
+    display: flex;
+    text-align: center;
+}
+
+.skill-box-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 30px;
+}
+
+
+.skill-box-container {
+    width: 100%;
+}
+
+/* -------- general box design start --------- */
+.skill-box-item {
+    font-family: primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+
+.skill-box-item h3 {
+    font-family: primary;
+    width: 70%;
+    text-align: right;
+}
+
+
+.skill-box-scroll {
+    content: '';
+    background: var(--white);
+    border-radius: 50px;
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.skill-box-design {
+    content: "";
+    background: var(--light-blue);
+    padding: 7px;
+    border-radius: 50px;
+}
+
+.scroll-1 {
+    width: 85%;
+}
+
+.scroll-2 {
+    width: 70%;
+}
+
+.scroll-3 {
+    width: 50%;
+}
+
+.scroll-4 {
+    width: 30px;
+}
+
+/* -------- general box design ends --------- */
+
+/* -------- skill-box-right design start --------- */
+
+.skill-box-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 40px;
+}
+
+
+
+
+/* -------- skill-box-right design ends --------- */
+
+
+
+/* ================== ABOUT SECTION  ENDS ======================== */
+
+
+
+/* ================== SERVICE SECTION  STARTS ======================== */
+.service-container {
+    font-size: primary;
+    background: var(--gradient);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 20px;
+}
+
+.service-container h1 {
+    font-family: secondary;
+    color: var(--light-blue);
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    font-size: var(--bigger);
+    margin-bottom: 30px;
+
+}
+
+.service-container h6 {
+    color: var(--white);
+    font-size: var(--small-big);
+    margin-top: -40px;
+    font-family: secondary;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+.service-box {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 50px;
+}
+
+.box-area-top {
+    display: flex;
+    margin: 0px 100px;
+}
+
+.box-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark-blue);
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.box-area h3 {
+    color: var(--light-blue);
+    font-family: secondary;
+    text-align: center;
+    font-size: var(--bigger);
+    line-height: 50px;
+    padding: 0px 40px;
+}
+
+.box-area img {
+    width: 100%;
+}
+
+.box-area p {
+    color: var(--white);
+    font-family: primary;
+    text-align: center;
+    font-size: var(--smaller);
+    margin: -30px 40px 50px;
+}
+
+.box-1,
+.box-2 {
+    background: var(--gradient);
+    transition: var(--transition);
+}
+
+.box-1:hover {
+    background: var(--light-blue);
+}
+
+.box-2:hover {
+    background: var(--light-blue);
+}
+
+/* ================== SERVICE SECTION  ENDS ======================== */
+
+
+/*======== PORTFOLIO SECTION DESIGN STARTS ==============*/
+
+
+
+
+.port-container{
+    padding: 10% 9%;
+    padding-bottom: 100px;
+    font-family: secondary;
+    position: relative;
+}
+.port-heading{
+    text-align: center;
+    padding-bottom: 15px;
+    color: var(--light-blue);
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    font-size: 50px;
+}
+
+.port-box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.port-box{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2) ;
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: var(--box-border);
+
+}
+
+.port-box img{
+    height: 80px;
+}
+
+ .port-box h3{
+    color: #444;
+    font-size: 22px;
+    padding: 10px 0;
+    text-shadow:0 5px 10px rgba(0,0,0,.4) ;
+ }
+
+ .port-box p{
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+ }
+
+/*======== PORTFOLIO SECTION DESIGN ENDS ==============*/
+
+
+
+/* =========== CONTACT DESIGN ============================ */
+
+/*======== CONTACT SECTION DESIGN==============*/
+.contact-container{
+    display:flex;
+    flex-direction:column;
+    position:relative;
+}
+
+.contact-container-content{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.contact-container-content-left, .contact-container-content-right{
+    width: 50%;
+    position:relative;
+    z-index:10;
+}
+
+.contact-container-content-left{
+    padding:70px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.contact-container-content-left h5{
+    color:var(--light-blue);
+    font-family:primary;
+    font-size: var(--big);
+}
+
+.contact-container-left-address{
+    color:var(--white);
+    font-family:primary;
+    font-size:var(--small-big);
+    line-height: 50px;
+}
+
+.contact-container-back{
+    content:"";
+    background: var(--gold);
+    padding: 220px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.contact-container-content-right{
+    background:var(--white);
+    margin:100px 150px;
+    padding: 60px;
+    box-shadow:var(--dark-box-border);
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-style:solid;
+    border-width:0px 0px 2.2px 0px;
+    border-color:var(--black);
+    border-radius: 5px;
+}
+
+::placeholder{
+   color: var(--black);
+   font-family:primary;
+   font-size: var(--smaller); 
+}
+input[type=submit]{
+    color:var(--white);
+    font-size:var(--small);
+    background:var(--light-blue);
+    border:none;
+    cursor:pointer;
+    width: 40%;
+    text-align:center;
+    margin-left: 60%;
+}
+
+input[type=submit]:hover{
+    transition:var(--transition);
+    background:var(--gradient);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========== CONTACT DESIGN  ENDS ============================ */
+
+
+
+
+
+
+/* ============= FOOTER SECTION ==================== */
+.footer-container{
+    background:var(--white);
+    padding: 30px;
+    text-align:center;
+}
+
+.footer-container h3{
+    color: var(--gold);
+}
+
+.footer-container h3 span a{
+    color: var(--light-blue);
+}
+
+.footer-container h5{
+    color: var(--gold);
+    letter-spacing: 5px;
+}
+
+
+/* ============= FOOTER SECTION ENDS ==================== */
+
+
+
+
+/* =============== KEYFRAME ANIMATION ================ */
+
+@keyframes showRight {
+    100% {
+        width: 0;
+
+
+
+    }
+}
+
+@keyframes manipActiveHover {
+    100% {
+        pointer-events: auto;
+    }
+
+}
+
+
+/* ====== CIRCLE ANIMATION START HERE ======== */
+
+@keyframes edge {
+    to {
+        rotate: 360deg
+    }
+}
+
+/* ====== CIRCLE ANIMATION END HERE ======== */

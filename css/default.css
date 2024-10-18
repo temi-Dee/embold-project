@@ -1,0 +1,234 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:secondary;
+    width:100%;
+    height: 100vh;
+    overflow-x:hidden;
+    background: var( --gradient);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+    text-decoration:none;
+}
+
+:root{
+  --dark-blue:#081b29;
+  /* --blue:#143887; */
+  --light-blue:#00abf0;
+  /* --light-pink:#d3bac5; */
+  --white:#ededed;
+--gold:rgb(255, 140, 0);
+  --black:rgb(0,0,0);
+  --gradient:linear-gradient(125deg, #00032a,  #143887);
+  --light-gradient:linear-gradient(270deg, #222ed8, #ffffff);
+      --box-border:2px 2px 15px 2px rgb(255, 140, 0);
+      --dark-box-border:2px 2px 15px 2px rgb(6, 6, 6);
+    --transition:0.4s ease-in-out;
+
+
+/*======== FONT SIZE DEFINE=============*/
+--small:18px;
+--smaller:16px;
+--small-big:20px;
+--big:32px;
+--bigger:45px;
+--h1:50px;
+--paragraph: 13px;
+
+}
+
+
+/*======== FONT FAMILY STYLE==============*/
+@font-face {
+    font-family:primary;
+    src: url(/fonts/Open_Sans/static/OpenSans-Bold.ttf);
+    font-weight:bold;
+  }
+
+@font-face {
+    font-family: primary-bold;
+    src: url(/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+    font-weight:bold;
+  }
+
+  @font-face {
+    font-family: secondary;
+    src: url(/fonts/octosquares/TT\ Octosquares\ Trial\ Black.ttf);
+    font-weight:bold;
+  }
+
+  @font-face {
+    font-family: tertiary;
+    src: url(/fonts/Poppins/Poppins-Bold.ttf);
+    font-weight:bold;
+  }
+
+  /*======== BUTTON STYLE ==============*/
+
+  .btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: var(--light-blue);
+    border: 2px solid var(--light-blue);
+    border-radius: 8px;
+    font-size: 19px;
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+  color: var(--light-blue);
+}
+
+.btn-box a:nth-child(2) {
+  background: transparent;
+  color: var(--light-blue);
+}
+
+.btn-box a:nth-child(2):hover {
+  color: var(--dark-blue);
+}
+
+.btn-box a:nth-child(2)::before {
+  background: var(--light-blue);
+}
+
+
+
+.btn-box a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--dark-blue);
+  z-index: -1;
+  transition: .5s;
+}
+
+
+/* ======== portfolio button ============= */
+/* .port-btn{
+  margin-top: 10px;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 8px 25px;
+} */
+
+.port-btn a:hover{
+box-shadow:0 10px 15px rgba(0,0,0,.3) ;
+transform: scale(1.03);
+color: var(--dark-blue);
+}
+
+.port-btn a{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: var(--light-blue);
+  border: 2px solid var(--light-blue);
+  border-radius: 8px;
+  font-size: 19px;
+  color: var(--dark-blue);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.port-box a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--dark-blue);
+  z-index: -1;
+  transition: .5s;
+}
+
+
+
+
+
+
+
+
+
+/* ======== portfolio button ends ============= */
+
+
+.btn-box a:hover::before {
+  width: 100%;
+}
+
+
+ /*========   BUTTON STYLE  ENDS   ==============*/
+
+img{
+  max-width: 100%;
+  max-height: auto;
+}
+
+
+.design-container{
+  background:var(--deem-cream);
+  height:10vh;
+  border-radius:0% 0% 100% 100%;
+  margin:0px;
+}
+
+.design-container-2{
+  background:var(--dark-gradient);
+  height:10vh;
+  border-radius:100% 100% 0% 0%;
+  margin:0px;
+}
+
+
+  /*======== ANIMATION DESIGNS==============*/
+  .scroll-container{
+    height:1px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background-color:var(--violent);
+    width: 100%;
+    scale: 0 1;
+    transform-origin:left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll(Y);
+    transition:var(--transition);
+  }
+
+  @keyframes scroll-watcher {
+    to {scale: 1 1;
+        height:10px;
+        background: var(--gradient);
+    };
+  }
